@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PowerStep Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #ffffff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      color: #0055a5;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+    nav ul li {
+      margin-right: 1rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    nav ul li a:hover {
+      color: #0055a5;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section {
+      margin-bottom: 2rem;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1.5rem;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .section h2 {
+      color: #0055a5;
+      margin-bottom: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ffffff;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PowerStep</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="home" class="section">
+      <h2>Welcome to PowerStep</h2>
+      <p>PowerStep is a sustainable energy project that converts kinetic energy from footsteps into usable electrical power. This website serves as an interface to showcase our thesis progress, data insights, and system overview.</p>
+    </section>
+
+    <section id="dashboard" class="section">
+      <h2>Dashboard</h2>
+      <p>Footstep Count: <strong>--</strong></p>
+      <p>Battery Level: <strong>--</strong></p>
+      <p>Light Status: <strong>--</strong></p>
+      <p>Note: These are placeholder values. Live data integration will be added soon.</p>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About the System</h2>
+      <p>PowerStep utilizes piezoelectric sensors embedded in tiles to collect kinetic energy from foot traffic. The system converts this into electrical energy, stores it in a battery, and uses an Arduino with sensors to control lighting and upload data to a server for monitoring.</p>
+    </section>
+
+    <section id="team" class="section">
+      <h2>Meet the Team</h2>
+      <p>We are a group of Computer Engineering students from Cavite State University - Carmona Campus, developing this project as part of our thesis research on sustainable technology and smart systems.</p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact Us</h2>
+      <p>For inquiries or feedback, please email us at <a href="mailto:powerstep@cvsu.edu.ph">powerstep@cvsu.edu.ph</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 PowerStep Thesis Group. All rights reserved.</p>
+  </footer>
+</body>
+</html>
