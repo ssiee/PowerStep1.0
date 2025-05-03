@@ -41,9 +41,11 @@
       text-decoration: none;
       color: #333;
       font-weight: 500;
+      cursor: pointer;
     }
-    nav ul li a:hover {
+    nav ul li a.active {
       color: #0055a5;
+      border-bottom: 2px solid #0055a5;
     }
     .container {
       padding: 2rem;
@@ -51,12 +53,15 @@
       margin: auto;
     }
     .section {
-      margin-bottom: 2rem;
+      display: none;
       border: 1px solid #ddd;
       border-radius: 10px;
       padding: 1.5rem;
       background-color: #fff;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .section.active {
+      display: block;
     }
     .section h2 {
       color: #0055a5;
@@ -75,17 +80,17 @@
     <h1>PowerStep</h1>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#dashboard">Dashboard</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a class="tab-link active" data-target="home">Home</a></li>
+        <li><a class="tab-link" data-target="dashboard">Dashboard</a></li>
+        <li><a class="tab-link" data-target="about">About</a></li>
+        <li><a class="tab-link" data-target="team">Team</a></li>
+        <li><a class="tab-link" data-target="contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="container">
-    <section id="home" class="section">
+    <section id="home" class="section active">
       <h2>Welcome to PowerStep</h2>
       <p>PowerStep is a sustainable energy project that converts kinetic energy from footsteps into usable electrical power. This website serves as an interface to showcase our thesis progress, data insights, and system overview.</p>
     </section>
@@ -117,5 +122,26 @@
   <footer>
     <p>&copy; 2025 PowerStep Thesis Group. All rights reserved.</p>
   </footer>
+
+  <script>
+    const links = document.querySelectorAll(".tab-link");
+    const sections = document.querySelectorAll(".section");
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        // Remove active from all links
+        links.forEach(l => l.classList.remove("active"));
+        // Hide all sections
+        sections.forEach(sec => sec.classList.remove("active"));
+
+        // Add active to clicked link
+        link.classList.add("active");
+
+        // Show the selected section
+        const target = link.getAttribute("data-target");
+        document.getElementById(target).classList.add("active");
+      });
+    });
+  </script>
 </body>
 </html>
